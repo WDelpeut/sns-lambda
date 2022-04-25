@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "sns-lambda:MyLambdaFunction",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/template.yaml",
+                "logicalId": "MyLambdaFunction"
+            },
+            "lambda": {}
+        }
+    ]
+}
