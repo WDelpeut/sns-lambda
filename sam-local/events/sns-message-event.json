@@ -1,0 +1,21 @@
+{
+  "Records": [
+    {
+      "EventVersion": "1.0",
+      "EventSubscriptionArn": "arn:aws:sns:us-east-1:1234567890:Test:12345-abcde",
+      "EventSource": "aws:sns",
+      "Sns": {
+        "SignatureVersion": "1",
+        "Timestamp": "2019-01-02T12:45:07.000Z",
+        "Signature": "Test",
+        "SigningCertUrl": "https://",
+        "MessageId": "123",
+        "Message": "{\"Hello\":\"World!\"}",
+        "Type": "Notification",
+        "UnsubscribeUrl": "unsubscribe-here",
+        "TopicArn":"arn:aws:sns:us-east-1:1234567890:Test",
+        "Subject": "TestInvoke"
+      }
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 
-Description: Configure SNS topic as event source for Lambda function
+Description: Set SNS topic as trigger for Lambda function
 
 Resources:
   MyLambdaFunction:
@@ -11,3 +11,13 @@ Resources:
       CodeUri: src/
       Handler: app.lambda_handler
       Runtime: python3.9
+      Events:
+        SNSEvent:
+          Type: SNS
+          Properties:
+            Topic: !Ref MySnsTopic
+
+  MySnsTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: MySnsTopic
